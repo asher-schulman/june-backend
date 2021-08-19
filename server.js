@@ -2,7 +2,7 @@
 // Environmental Variables
 ///////////////////////////
 require("dotenv").config();
-const { PORT, MONGODBURI, NODE_ENV } = process.env
+const { PORT, MONGODBURI } = process.env
 
 const express = require("express");
 const morgan = require("morgan");
