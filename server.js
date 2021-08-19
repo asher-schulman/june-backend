@@ -2,7 +2,7 @@
 // Environmental Variables
 ///////////////////////////
 require("dotenv").config();
-const { PORT, MONGODBURI } = process.env
+const { PORT, MONGODBURI, NODE_ENV } = process.env
 
 const express = require("express");
 const morgan = require("morgan");
@@ -11,7 +11,6 @@ const session = require("express-session");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
-const corsOptions = require("./configs/cors.js");
 const authRouter = require("./controllers/auth");
 const apiRouter = require("./controllers/api");
 
