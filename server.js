@@ -84,8 +84,13 @@ app.get('/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/login' }),
   function(req, res) {
     // Successful authentication, redirect frontendhomeurl?.
-    res.redirect('https://june-weather.herokuapp.com/');
+    res.redirect('https://june-weather.herokuapp.com');
   });
+
+// get around heroku by pinging the server every 5 minutes
+setInterval(function() {
+    app.get("https://june-backend.herokuapp.com");
+}, 300000); // every 5 minutes (300000)
 
 ///////////////
 //Routes and Routers
