@@ -33,7 +33,7 @@ DB.on("open", () => console.log("connected to mongo database"))
 ////////////
 // NODE_ENV === "production" ? app.use(cors(corsOptions)) : app.use(cors());
 app.use(cors({
-  origin: "http://localhosthttps://june-weather.herokuapp.com",
+  origin: "https://june-weather.herokuapp.com",
   credentials: true
 }))
 app.use(express.json());
@@ -84,7 +84,7 @@ app.get('/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/login' }),
   function(req, res) {
     // Successful authentication, redirect frontendhomeurl?.
-    res.redirect('http://localhost:3000');
+    res.redirect('https://june-weather.herokuapp.com/');
   });
 
 ///////////////
