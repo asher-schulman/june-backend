@@ -89,7 +89,9 @@ app.get('/auth/google/callback',
 
 // get around heroku by pinging the server every 5 minutes
 setInterval(function() {
-    app.get("https://june-backend.herokuapp.com");
+    app.get("https://june-backend.herokuapp.com", (req, res) => {
+      console.log('wake up!')
+    });
 }, 300000); // every 5 minutes (300000)
 
 ///////////////
