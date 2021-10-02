@@ -93,7 +93,7 @@ app.get('/auth/google/callback',
 
 //Route for testing server is working
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Hello World! use route '/api' to see more documentation");
 });
 
 app.get("/json", (req, res) => {
