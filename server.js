@@ -33,7 +33,7 @@ DB.on("open", () => console.log("connected to mongo database"))
 ////////////
 // NODE_ENV === "production" ? app.use(cors(corsOptions)) : app.use(cors());
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "http://localhosthttps://june-weather.herokuapp.com",
   credentials: true
 }))
 app.use(express.json());
