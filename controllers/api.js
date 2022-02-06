@@ -9,7 +9,8 @@ router.get("/", async (req, res) => {
     try {
         res.status(200).json( await {
             response: "welcome to the my weather api",
-            how_to_use: "enter route '/api/zipcode' to make an API call to openweathermap to get current weather for queried zip code"
+            how_to_use_zip_code: "enter route '/api/zipcode' to make an API call to openweathermap to get current weather for queried US zip code",
+            how_to_use_city_name: "enter route '/api/city' to make an API call to openweathermap to get current weather for queried US city"
         })
     } catch (err) {
         res.status(400).json(err)
